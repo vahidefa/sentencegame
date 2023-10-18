@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "sentencegame"
+version = "0.1.0"
+description = ""
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+pydantic = "^1.10.9"
+pymongo = "^4.4.0"
+pyjwt = "^2.7.0"
+pillow = "^9.5.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

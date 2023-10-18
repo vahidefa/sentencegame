@@ -1,0 +1,457 @@
+@font-face {
+  font-family: Vazir;
+  font-style: normal;
+  font-weight: normal;
+  src: url("fonts/Vazir.eot");
+  src: url("fonts/Vazir.eot?#iefix") format("embedded-opentype"),
+    url("fonts/Vazir.woff2") format("woff2"),
+    url("fonts/Vazir.woff") format("woff"),
+    url("fonts/Vazir.ttf") format("truetype");
+}
+@font-face {
+  font-family: Vazir;
+  font-style: normal;
+  font-weight: bold;
+  src: url("fonts/Vazir-Bold.eot");
+  src: url("fonts/Vazir-Bold.eot?#iefix") format("embedded-opentype"),
+    url("fonts/Vazir-Bold.woff2") format("woff2"),
+    url("fonts/Vazir-Bold.woff") format("woff"),
+    url("fonts/Vazir-Bold.ttf") format("truetype");
+}
+
+body {
+  font-family: "Vazir", Arial, sans-serif;
+  font-weight: normal;
+}
+/* general style */
+body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+}
+
+*:focus {
+  outline: none !important;
+}
+
+#root {
+  width: 100%;
+  max-width: 420px;
+  min-width: auto;
+  margin: 0 auto;
+  position: relative;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 100%;
+  direction: rtl;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.background {
+  background-size: 100% 100%;
+  height: 100%;
+}
+.welcome_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 3em;
+  flex-direction: column;
+}
+
+/* .welcome_container img {
+  width: 540px;
+  height: 400px;
+} */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-size: 13px;
+}
+.btn::before,
+.btn::after {
+  position: absolute;
+  content: "";
+}
+
+.btn {
+  position: relative;
+  display: inline-block;
+  width: auto;
+  height: auto;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  margin: 0px 17px 15px;
+  /* min-width: 150px; */
+}
+.btn span {
+  position: relative;
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 15px 20px;
+  transition: 0.3s;
+  border-radius: 20px;
+}
+
+/*--- btn-3 ---*/
+.btn-3 {
+  padding: 3px;
+}
+.btn-3 span {
+  color: rgb(255, 255, 255);
+  background-color: #d38fbe;
+  text-align: center;
+}
+.btn-3::before,
+.btn-3::after {
+  background: transparent;
+  z-index: 2;
+}
+
+/* 13. hover-border-3 */
+.btn.hover-border-3::before,
+.btn.hover-border-3::after {
+  width: 0%;
+  height: 0%;
+  opacity: 0;
+  transition: width 0.2s 0.15s linear, height 0.15s linear, opacity 0s 0.35s;
+}
+.btn.hover-border-3::before {
+  top: 0;
+  right: 0;
+  border-top: 1px solid #d38fbe;
+  border-left: 1px solid #d38fbe;
+}
+.btn.hover-border-3::after {
+  bottom: 0;
+  left: 0;
+  border-bottom: 1px solid #d38fbe;
+  border-right: 1px solid #d38fbe;
+}
+.btn.hover-border-3::before,
+.btn.hover-border-3::after {
+  width: 100%;
+  height: 99%;
+  opacity: 1;
+  transition: width 0.2s linear, height 0.15s 0.2s linear, opacity 0s;
+  border-radius: 20px;
+}
+
+/* login_page */
+
+.gradient-custom-2 {
+  background: #3638db;
+}
+
+.login-btn {
+  height: 40px;
+}
+
+.btn-register {
+  border: 1px solid #530ff8;
+  color: #530ff8;
+}
+@media (min-width: 768px) {
+  .gradient-form {
+    height: 100vh !important;
+  }
+}
+@media (min-width: 769px) {
+  .gradient-custom-2 {
+    border-top-right-radius: 0.3rem;
+    border-bottom-right-radius: 0.3rem;
+  }
+}
+
+.img_container img {
+  width: 250px;
+}
+
+.Register_page {
+  background-image: url("../../public/image/sign\ up2.jpg");
+}
+
+.profile_page {
+  background-image: url("../../public/image/05-student\ profile2.jpg");
+}
+
+.game_page {
+  background-image: url("../../public/image/07-Game\ page2.jpg");
+}
+
+.background_page {
+  background-image: url("../../public/image/04-seantens\ list2.jpg");
+}
+
+.scoreboard_page {
+  background-image: url("../../public/image/03-learderboard2.jpg");
+}
+
+.personal-image {
+  text-align: center;
+}
+.personal-image input[type="file"] {
+  display: none;
+}
+.personal-figure {
+  position: relative;
+  width: 120px;
+  height: 120px;
+}
+.personal-avatar {
+  cursor: pointer;
+  width: 130px;
+  height: 130px;
+  box-sizing: border-box;
+  border-radius: 100%;
+  border: 2px solid transparent;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.2);
+  transition: all ease-in-out 0.3s;
+}
+.personal-avatar:hover {
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.5);
+}
+.personal-figcaption {
+  cursor: pointer;
+  position: absolute;
+  top: 0px;
+  width: 130px;
+  height: 130px;
+  border-radius: 100%;
+  opacity: 0;
+  background-color: rgba(0, 0, 0, 0);
+  transition: all ease-in-out 0.3s;
+}
+.personal-figcaption:hover {
+  opacity: 1;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.personal-figcaption > img {
+  margin-top: 40px;
+  width: 50px;
+  height: 50px;
+}
+
+.title {
+  color: #fff;
+  margin: 0 auto;
+  font-weight: 500;
+  margin-top: 1.5em;
+  text-align: center;
+}
+
+.user_info {
+  display: flex;
+  flex-direction: column;
+  color: #fff;
+  justify-content: center;
+  align-items: center;
+  font-size: 15px;
+}
+
+.item_icon {
+  width: 40px;
+  background-color: #fff;
+  color: #dd4083;
+  text-align: center;
+  border-radius: 100%;
+}
+
+.link {
+  text-decoration: none;
+  color: #fff;
+  margin-top: 0.5em;
+  font-size: 13px;
+}
+.link:hover {
+  color: #fff;
+}
+.button {
+  background-color: #fff;
+  text-decoration: none;
+  text-align: center;
+  padding: 15px;
+  border-radius: 30px;
+  color: #3c3082;
+  font-size: 15px;
+}
+
+.button:hover {
+  color: #3c3082;
+}
+
+.line {
+  width: 90%;
+  height: 3px;
+  color: #a7a6a6;
+}
+
+.icon_container {
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  background: #406ab2;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.home_icon,
+.style_icon {
+  text-decoration: none;
+  font-size: 25px;
+  color: #ffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.counter_container {
+  width: 100px;
+  background: #79a1e7;
+  border-radius: 30px;
+  color: #ffff;
+  font-size: 20px;
+  padding-right: 0.5em;
+  position: relative;
+}
+
+.counter_icon {
+  position: absolute;
+  right: 41%;
+}
+
+.word-span {
+  width: 80px !important;
+  height: 80px !important;
+  border-radius: 50% !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff !important;
+  color: #2b55a7 !important;
+}
+
+.btn-word::before {
+  top: 0;
+  right: 0;
+  border-top: 1px solid #fff !important;
+  border-left: 1px solid #fff !important;
+}
+.btn-word::after {
+  border-bottom: 1px solid #fff !important;
+  border-right: 1px solid #fff !important;
+}
+.btn-word::before,
+.btn-word::after {
+  border-radius: 50% !important;
+}
+
+.userList_page {
+  background-image: url("../../public/image/03-learderboard2.jpg");
+}
+
+.home_container {
+  position: fixed;
+  top: 80%;
+  left: 45%;
+  width: 60px;
+  height: 60px;
+  background: #7a81cf;
+  border-radius: 100%;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.home_container .home_icon {
+  font-size: 30px;
+}
+
+.spacer {
+  height: 10px;
+}
+
+.table > :not(:first-child) {
+  border-top: none !important;
+}
+
+.btn-role {
+  position: relative;
+  padding: 10px;
+  margin: 10px;
+  width: 60px;
+  height: 60px;
+  text-align: center;
+  background-color: #d38fbe;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn-welcome {
+  position: relative;
+  display: inline-block;
+  padding: 10px;
+  margin: 80px;
+  text-align: center;
+  background-color: #d38fbe;
+  border-radius: 30px;
+  width: 50%;
+  padding: 0.75em;
+  color: #fff;
+  font-size: 20px;
+}
+
+.btn-welcome:hover {
+  color: #fff;
+}
+
+.show_message {
+  padding: 1em;
+  border: 3px solid #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2em;
+  font-size: 20px;
+  color: #fff;
+  font-weight: bolder;
+}
+
+.button_game {
+  border: none;
+  background: none;
+  position: absolute;
+  right: 75%;
+  color: #3c3082;
+}
+
+.input_game {
+  border-radius: 30px;
+  height: 40px;
+  background-color: "#d3cbe3";
+  border-color: #d3cbe3;
+}
+
+.home_container a {
+  color: transparent !important;
+}
+
+.list-group-item {
+  border-radius: 4px;
+}
